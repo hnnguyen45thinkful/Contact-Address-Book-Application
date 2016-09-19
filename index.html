@@ -6,7 +6,7 @@
 	<!--This is the normalize css which helps the HTML, CSS from defaulting and resetting and lastly correct bugs and common problems with the webpages. -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   	<!--This the link to Bootstrap for the application.-->
-  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">  	
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  	
   	<!--This is the CSS main.css file single extension.-->
   	<link rel="stylesheet" href="main.css">
 </head>
@@ -20,27 +20,27 @@
 			<form id="contactForm">
 				<div class="form-group">
     				<label for="firstName">First Name</label>
-    				<input type="text" class="form-control" id="firstName" required="">
+    				<input type="text" class="form-control" id="firstName" placeholder="e.g. John" required="">
   				</div>
   				<div class="form-group">
     				<label for="lastName">Last Name</label>
-   					 <input type="text" class="form-control" id="lastName" required="">
+   					 <input type="text" class="form-control" id="lastName" required="" placeholder="e.g. Smith">
   				</div>
   				<div class="form-group">
     				<label for="phoneNumber">Phone Number</label>
-   					 <input type="text" class="form-control" id="phoneNumber" required="">
+   					 <input type="text" class="form-control" id="phoneNumber" required="" placeholder="e.g. (###)-###-####">
   				</div>
   				<div class="form-group">
     				<label for="street">Street</label>
-   					 <input type="text" class="form-control" id="street">
+   					 <input type="text" class="form-control" id="street" placeholder="e.g. 1234 Name Street">
   				</div>
   				<div class="form-group">
     				<label for="city">City</label>
-   					 <input type="text" class="form-control" id="city">
+   					 <input type="text" class="form-control" id="city" placeholder="e.g. Los Angeles">
   				</div>
   				<div class="form-group">
     				<label for="state">State</label>
-   					 <input type="text" class="form-control" id="state">
+   					 <input type="text" class="form-control" id="state" placeholder="e.g. CA (abbrevation)">
   				</div>
   				 <button type="submit" id="btn-submit" class="btn btn-primary">Add</button>
   			</form>
