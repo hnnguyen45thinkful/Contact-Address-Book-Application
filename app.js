@@ -12,8 +12,6 @@ var Contact = {
 
 $(document).ready(function(){
 
-
-
 	$("#btn-submit").click(function(e){
 		e.preventDefault();
 		createContact();
@@ -28,14 +26,12 @@ $(document).ready(function(){
 
 function createContact(){
 	newContact = Object.create(Contact);
-
 	newContact.firstName = $("#firstName").val();
 	newContact.lastName = $("#lastName").val();
 	newContact.phoneNumber = $("#phoneNumber").val();
 	newContact.street = $("#street").val();
 	newContact.city = $("#city").val();
 	newContact.state = $("#state").val();
-
 	list.push(newContact);
 }
 
