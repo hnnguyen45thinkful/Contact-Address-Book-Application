@@ -1,0 +1,77 @@
+<!--Created and modified by Hieu Nguyen -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts Application Optional</title>
+	<!--This is the normalize css which helps the HTML, CSS from defaulting and resetting and lastly correct bugs and common problems with the webpages. -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  	<!--This the link to Bootstrap for the application.-->
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">  	
+  	<!--This is the CSS main.css file single extension.-->
+  	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="container">
+	<h1>Contacts</h1>
+	<section class="row">
+		<main class="col-md-7 add-contact">
+			<h3>Add a contact:</h3>
+			<form id="contactForm">
+				<div class="form-group">
+    				<label for="firstName">First Name</label>
+    				<input type="text" class="form-control" id="firstName" required="">
+  				</div>
+  				<div class="form-group">
+    				<label for="lastName">Last Name</label>
+   					 <input type="text" class="form-control" id="lastName" required="">
+  				</div>
+  				<div class="form-group">
+    				<label for="phoneNumber">Phone Number</label>
+   					 <input type="text" class="form-control" id="phoneNumber" required="">
+  				</div>
+  				<div class="form-group">
+    				<label for="street">Street</label>
+   					 <input type="text" class="form-control" id="street">
+  				</div>
+  				<div class="form-group">
+    				<label for="city">City</label>
+   					 <input type="text" class="form-control" id="city">
+  				</div>
+  				<div class="form-group">
+    				<label for="state">State</label>
+   					 <input type="text" class="form-control" id="state">
+  				</div>
+  				 <button type="submit" id="btn-submit" class="btn btn-primary">Add</button>
+  			</form>
+		</main>
+<!--This class is to create a small side in the application to show the input inside the whole section class.-->
+		<aside class="col-md-5 contact-detail">
+			<h3>Nextdoor Neighbor</h3>
+			<p class="firstname"></p>
+			<p class="lastname"></p>
+			<p class="phone-number"></p>
+			<div class="address">
+				<ul>
+				
+				</ul>
+			</div>
+		</aside>
+	</section>
+
+	<section class="row contact-list">
+		<div class="col-md-7">
+			<h3>Contacts:</h3>
+			<ul>
+			</ul>
+		</div>
+	</section>
+
+</div>
+
+<!-- jquery Script-- >
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
