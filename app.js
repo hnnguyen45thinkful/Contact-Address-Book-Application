@@ -1,6 +1,6 @@
 //Create defining variables and global before writing jQuery and Javascript.
 var newContact;
-var list=[];
+var list = [];
 var Contact = {
 	firstName : "",
 	lastName : "",
@@ -11,19 +11,18 @@ var Contact = {
 };
 
 $(document).ready(function(){
-
+//Create a button submit and get information inputed in. Along with storing and displaying results.
 	$("#btn-submit").click(function(e){
 		e.preventDefault();
 		createContact();
-		displayContactList();	
-	
+		displayContactList();		
 	});
 
-	$('ul').on('click', 'li', function(event) {
+	$('ul').on('click', 'li', function() {
   		contactDetail($(this)[0].id);
 	});
 });
-
+//Create a contact with all information input in.
 function createContact(){
 	newContact = Object.create(Contact);
 	newContact.firstName = $("#firstName").val();
@@ -34,7 +33,7 @@ function createContact(){
 	newContact.state = $("#state").val();
 	list.push(newContact);
 }
-
+//Show information organize the list to view and see with a link.
 function displayContactList(){
 	$(".contact-list ul").append('<a><li id="' + (list.length-1) +'">'+newContact.firstName + ' ' +newContact.lastName+'<br></li></a>');
 	
@@ -46,7 +45,7 @@ function displayContactList(){
 	$("#city").val("");
 	$("#state").val("");
 }
-
+//List the contact details below.
 function contactDetail(index){
 
 	// clear content
@@ -61,7 +60,7 @@ function contactDetail(index){
 	$(".phone-number").append("Phone Number: "+list[index].phoneNumber);
 	$(".address").append("<p>Address</p>");
 
-
+//Creating conditional statements for address and other information.
 	if((list[index].street != "") && (list[index].city != "")){
 		$(".address").append("<li>"+list[index].street+", "+list[index].city+"</li>");
 	}else if((list[index].street != "") && (list[index].state != "")){
